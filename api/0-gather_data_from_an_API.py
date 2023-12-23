@@ -19,10 +19,10 @@ if __name__ == "__main__":
 
     for task in task_list:
         if task.get("userId") == int(id):
-            total += 1
             if task.get("completed") is True:
-                tasks.append(task.get(task["title"]))
+                tasks.append(task["title"])
                 completed += 1
+            total += 1
 
     print("Employee {} is done with tasks({}/{}):"
           .format(name, completed, total))
